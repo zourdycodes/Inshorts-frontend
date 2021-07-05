@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Menu = styled.div`
-  flex: 0.45;
+  flex: 0.48;
 `;
 
 export const NavContainer = styled.div`
@@ -9,4 +9,9 @@ export const NavContainer = styled.div`
   box-shadow: 0px 1px 8px #888888;
   display: flex;
   align-items: center;
+`;
+
+export const Logo = styled.img`
+  height: 80%;
+  cursor: pointer;
 `;

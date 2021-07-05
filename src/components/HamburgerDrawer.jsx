@@ -37,16 +37,16 @@ export const Drawer = ({ setCategory }) => {
   });
 
   //---------------------------------------------------
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  // const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
 
   const theme = React.useMemo(
     () =>
       createMuiTheme({
         palette: {
-          type: prefersDarkMode ? "dark" : "light",
+          type: "dark",
         },
       }),
-    [prefersDarkMode]
+    []
   );
   //----------------------------------------------------
 
