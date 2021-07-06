@@ -9,6 +9,7 @@ import {
   TextLink,
   Link,
   Author,
+  AuthorLink,
 } from "../global/styles/Footer";
 import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
@@ -54,6 +55,11 @@ export const Footer = () => (
       <Heading>&copy; Inshorts —― United Kingdom</Heading>
     </LogoContainer>
 
-    <Author>Built with ☕ by Muhammad Zourdy</Author>
+    <Author>
+      Built with ☕ by{" "}
+      <AuthorLink href="https://zourdydev.vercel.app">
+        Muhammad Zourdy
+      </AuthorLink>
+    </Author>
   </FooterContainer>
 );

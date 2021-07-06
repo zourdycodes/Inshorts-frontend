@@ -35,6 +35,10 @@ export const TextInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  &:hover {
+    transition: all 0.2s ease;
+    color: orangered;
+  }
 
   @media (max-width: 800px) {
     text-align: center;
@@ -76,5 +80,15 @@ export const Author = styled.span`
   margin-top: 20px;
   @media (max-width: 800px) {
     margin-top: 80px;
+  }
+`;
+
+export const AuthorLink = styled.a`
+  color: #777777 !important;
+
+  &:hover {
+    text-decoration: underline !important;
+    color: white !important;
+    transition: all 0.2s ease;
   }
 `;
