@@ -12,15 +12,19 @@ export const App = () => {
   const [loadMore, setLoadMore] = useState(13);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=gb&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`
-      );
-      setContent(data.articles);
-      setNewsResults(data.totalResults);
-    };
+    try {
+      const fetchData = async () => {
+        const { data } = await axios.get(
+          `https://newsapi.org/v2/top-headlines?country=gb&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`
+        );
+        setContent(data.articles);
+        setNewsResults(data.totalResults);
+      };
 
-    fetchData();
+      fetchData();
+    } catch (error) {
+      console.error(error.message);
+    }
   }, [category, loadMore]);
 
   console.log(content);
