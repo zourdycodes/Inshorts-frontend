@@ -38,5 +38,10 @@ export const Global = createGlobalStyle`
   
   ::-webkit-scrollbar-thumb {
     background: #444444;
+    border-radius: 8px;
+    
+    &:hover {
+      background: #777777;
+    }
   }
 `;
