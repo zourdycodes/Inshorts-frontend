@@ -22,9 +22,8 @@ export const NewsCard = ({ newsItem }) => {
   const hour = parseInt(date[4].substring(0, 2)); //
   const time = hour > 12 ? true : false;
 
-  const newDate = moment().format(newsItem.publishedAt);
+  const newDate = moment().format(newsItem.publishedAt); // 2021-07-05T18:05:00+07:00
   console.log(newDate);
-  console.log(hour);
 
   return (
     <CardContainer>
