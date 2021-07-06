@@ -13,9 +13,10 @@ export const App = () => {
 
   useEffect(() => {
     try {
+      const fixUrl = `https://cors-anywhere.herokuapp.com/`;
       const fetchData = async () => {
         const { data } = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=gb&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`
+          `${fixUrl}https://newsapi.org/v2/top-headlines?country=gb&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`
         );
         setContent(data.articles);
         setNewsResults(data.totalResults);
