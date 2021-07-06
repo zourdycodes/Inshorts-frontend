@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Menu = styled.div`
-  flex: 0.48;
+  flex: 0.5;
 `;
 
 export const NavContainer = styled.div`

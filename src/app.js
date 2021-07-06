@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Footer } from "./components/Footer";
 import { Navigation } from "./components/Navigation";
 import { NewsContent } from "./components/NewsContent";
 // import { v4 as uuidv4 } from "uuid";
@@ -8,7 +9,7 @@ export const App = () => {
   const [content, setContent] = useState([]);
   const [newsResults, setNewsResults] = useState();
   const [category, setCategory] = useState("general");
-  const [loadMore, setLoadMore] = useState(30);
+  const [loadMore, setLoadMore] = useState(13);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,6 +37,8 @@ export const App = () => {
           setLoadMore={setLoadMore}
         />
       )}
+
+      <Footer />
     </div>
   );
 };
