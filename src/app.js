@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Navigation } from "./components/Navigation";
+import { NewsContent } from "./components/NewsContent";
 // import { v4 as uuidv4 } from "uuid";
 
 export const App = () => {
@@ -27,9 +28,14 @@ export const App = () => {
   return (
     <div id="#home">
       <Navigation setCategory={setCategory} />
-      {content.map((article) => (
-        <p key={article.id}>{article.author}</p>
-      ))}
+      {newsResults && (
+        <NewsContent
+          newsResults={newsResults}
+          content={content}
+          loadMore={loadMore}
+          setLoadMore={setLoadMore}
+        />
+      )}
     </div>
   );
 };
